@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char ch[] = "_putchar";
+	char ch[8] = "_putchar";
 	int i;
 
 	for (i = 0; i < 9; i++)
