@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char ch[9] = "task0";
+char ch[9] = "_putchar";
 int i;
 for (i = 0; i < 9; i++)
 {
