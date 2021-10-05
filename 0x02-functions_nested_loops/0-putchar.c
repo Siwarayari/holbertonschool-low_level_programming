@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * main - Task 0
  *
@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char ch[9] = "task1";
+char ch[9] = "Holberton";
 int i;
 for (i = 0; i < 9; i++)
 {
