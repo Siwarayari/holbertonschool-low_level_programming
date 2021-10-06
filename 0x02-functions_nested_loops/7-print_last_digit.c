@@ -1,20 +1,21 @@
- #include "main.c
+#include "main.h"
 /**
- * print_last_digit - print the value of last digit.
- * @n: The integer .
- *
- * Return: the last digit of integer.
+ * print_last_digit - function that checks for lowercase character.
+ *@n:first letter
+ * Return: 0
  */
-int print_last_digit(int);
+int print_last_digit(int n)
 {
-if ((n % 10) < 0)
-{
-_putchar ((-1 * (n % 10)) + '0');
-return (-1 * (n % 10));
-}
-else
-{
-_putchar ((n % 10) + '0');
-return (n % 10);
-}
+	int a;
+
+	if (n < 0)
+	n = -n;
+
+	a = n % 10;
+
+	if (a < 0)
+	a = -a;
+
+	_putchar(a + '0');
+	return (a);
 }
