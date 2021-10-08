@@ -3,6 +3,7 @@
 #include <stdio.h>
 int _putchar(char c);
 int _isupper(int c);
+<<<<<<< HEAD
 int _isdigit(int c);
 int mul(int a, int b);
 void print_numbers(void);
@@ -15,3 +16,8 @@ void print_triangle(int size);
 void print_number(int n);
 #endif /* MAIN_H */
 
+=======
+
+
+#endif
+>>>>>>> ce87b2bc4715318d6089ec200cb0add2f706509e
