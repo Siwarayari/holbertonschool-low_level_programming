@@ -1,16 +1,15 @@
 #include "main.h"
 /**
- * main - Entry point
- *
+ * _isupper - Entry point
+ *@c: uppercase
  * Return: 0
  */
 int _isupper(int c)
 {
-	int i = 0;
-	char t[] = "_putchar";
-
-	for (i = 0; i < 8 ; i++)
-		_putchar(t[i]);
-	_putchar('\n');
-	return (0);
+	if (c >= 65 && c ≤ 90)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
