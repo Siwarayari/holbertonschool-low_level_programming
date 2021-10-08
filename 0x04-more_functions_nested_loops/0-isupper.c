@@ -4,7 +4,7 @@
  *
  * Return: 0
  */
-int main(void)
+int _isupper(int c)
 {
 	int i = 0;
 	char t[] = "_putchar";
