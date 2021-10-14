@@ -9,14 +9,21 @@
  */
 char *_strcat(char *dest, char *src)
 {
+	int i = 0;
+	int j = 0;
+	int k = 0;
 
-char destination[] = "Hello ";
-
-
-char source[] = "World!";
-strcat(destination, source);
-
-printf("Concatenated String: %s\n", destination);
-}
-return 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (dest[j] != '\0')
+	{
+		j++;
+	}
+	for (l = i; l <= i + j; l++)
+	{
+		dest[l] = src[k];
+	}
+	return (dest);
 }
