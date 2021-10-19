@@ -1,19 +1,21 @@
 includ "main.h"
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * _memset -fills the first n bytes
+ *@s: string to change
+ *@b: constant byte
+ *@n: number of b to change
  *
  * Return: s.
  */
+
 char *_memset(char *s, char b, unsigned int n);
 {
-	int i;
+	unsigned int i;
 
-	for (i= 0; i < = n; i++)
+	for (i= 0; i <  n; i++)
 	{
 		s[i] = b;
 	}
-return (s)
+return (s);
 }
