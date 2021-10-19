@@ -2,11 +2,12 @@
 #include <stddef.h>
 
 /**
- *_strchr - function that locates a character in a string.
- * @s: char
- * @c: char
- * Return: s
- */
+*_strchr - function that locates a character in a string.
+* @s: char
+* @c: char
+* Return: s
+*/
+
 char *_strchr(char *s, char c)
 {
 	int i;
