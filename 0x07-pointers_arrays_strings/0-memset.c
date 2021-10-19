@@ -5,7 +5,7 @@ includ "main.h"
  * @buffer: the address of memory to print
  * @size: the size of the memory to print
  *
- * Return: Nothing.
+ * Return: s.
  */
 char *_memset(char *s, char b, unsigned int n);
 {
