@@ -1,52 +1,65 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - function that inserts
- * a new node at a given position.
- * @head: pointer to pointer on the first node
- * @idx: s the index of the list where the new node should be added.
- * @n: integer
- * Return: the address of the new node, or NULL if it failed
+ * _listint_len - returns the number of elements in a linked listint_t list.
+ * @h: linked list type listint_t
+ * Return: the number of nodes
  */
+size_t _listint_len(const listint_t *h)
+{
+	unsigned int count = 0;
 
+	while (h)
+	{
+		count++;
+		h = h->next;
+	}
+
+	return (count);
+}
+
+/**
+ * insert_nodeint_at_index - inserts a new node at a given position.
+ * @head: linked lists
+ * @idx: index to linked list
+ * @n: number to linked list[index]
+ * Return: node by index
+ */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
+	unsigned int i = 0;
+	listint_t *node = *head, *newNode;
 
-	listint_t *ptr, *new, *temp, *x;
-	unsigned int i, j;
+	if (!head || idx > _listint_len(*head))
+		return (NULL);
 
-	if (head == NULL)
-		return (NULL);
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	x = *head;
-	j = 0;
-	while (x != NULL)
+	if (!idx)
 	{
-		x = x->next;
-		j++;
+		newNode = malloc(sizeof(listint_t));
+		if (!newNode)
+			return (NULL);
+		newNode->next = *head;
+		newNode->n = n;
+		*head = newNode;
+		return (newNode);
 	}
-	if (idx > j)
-		return (NULL);
-	ptr = *head;
-	if ((idx == 0 && *head == NULL) || idx == 0)
+
+	while (node)
 	{
-		new->n = n;
-		new->next = *head;
-		*head = new;
-		return (new);
-	}
-	i = 1;
-	while (i != idx && ptr->next != NULL)
-	{
-		ptr = ptr->next;
+		if (i == (idx - 1))
+		{
+			newNode = malloc(sizeof(listint_t));
+			if (!newNode)
+				return (NULL);
+
+			newNode->n = n;
+			newNode->next = node->next;
+			node->next = newNode;
+			return (newNode);
+		}
+		node = node->next;
 		i++;
 	}
-	new->n = n;
-	temp = ptr;
-	temp = temp->next;
-	ptr->next = new;
-	new->next = temp;
-	return (new);
+	return (NULL);
 }
