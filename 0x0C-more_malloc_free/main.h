@@ -4,3 +4,4 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 int *array_range(int min, int max);
 char *argstostr(int ac, char **av);
+char **strtow(char *str);
