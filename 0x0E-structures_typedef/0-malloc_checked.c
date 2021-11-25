@@ -1,17 +1,21 @@
-#include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
+#include "dog.h"
 /**
- * malloc_checked - function that allocates memory using malloc
- * @b: amout of byte to store on memory
- *
- * Return: pointer void
- */
-void *malloc_checked(unsigned int b)
-{
-	void *p;
+ * init_dog - variable of type
+ * @name: name
+ * @owner: owner
+ * @age: age
+ * @d: out
+*/
+void init_dog(struct dog *d, char *name, float age, char *owner)
 
-	p = malloc(b);
-	if (p == NULL)
-		exit(98);
-	return (p);
+{
+if (d)
+{
+d->name = name;
+d->age = age;
+d->owner = owner;
+}
+else
+return;
 }
